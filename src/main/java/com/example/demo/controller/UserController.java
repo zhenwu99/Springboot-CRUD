@@ -4,12 +4,14 @@ import com.example.demo.constant.SystemConstant;
 import com.example.demo.entity.User;
 import com.example.demo.utils.JwtUtils;
 import com.example.demo.utils.R;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
-//@Api(value = "用户接口", tags = {"用户接口"})
+@Api(value = "用户接口", tags = {"用户接口"})
 @CrossOrigin
 @RestController
 @RequestMapping("/api/user")
@@ -17,7 +19,7 @@ import java.util.HashMap;
 public class UserController {
 
 
-//    @ApiOperation("用户登录")
+    @ApiOperation("用户登录")
     @PostMapping("/login")
     public R login(){
 //        User currentUser = userService.login(user);
@@ -31,7 +33,7 @@ public class UserController {
 //        }
     }
 
-//    @ApiOperation("获取用户信息")
+    @ApiOperation("获取用户信息")
     @GetMapping("/info")
     public R info(String token){
         System.out.println(token);

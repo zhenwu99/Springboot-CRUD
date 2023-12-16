@@ -1,25 +1,27 @@
 package com.example.demo.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-//@ApiModel("user")
+@ApiModel("user")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-//    @ApiModelProperty("avatar")
+    @ApiModelProperty("头像")
     private String avatar;
 
-//    @ApiModelProperty("name")
+    @ApiModelProperty("姓名")
     private String name;
 
-//    @ApiModelProperty("introduction")
+    @ApiModelProperty("介绍")
     private String introduction;
 
-//    @ApiModelProperty("roles")
+    @ApiModelProperty("权限")
     private List<String> roles;
 }
